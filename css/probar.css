@@ -10,16 +10,26 @@
 
 .urito{
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content:flex-end;
+}
+
+.danito{
+  display: flex;
+  align-content: center;
 }
 
 .barralink{
   background:var(--navy);
-      color:#fff;
-      position:sticky;
-      top:0;
-      z-index:50;
-      box-shadow:0 1px 6px rgba(0,0,0,.12);
+  color:#fff;
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+
+ul{
+  list-style:none;
+
 }
 
 .tituloprincipal{
@@ -44,7 +54,6 @@
   margin-top: 5px;
   box-sizing: border-box;
   border-radius: 10px;
-
 }
 
 
@@ -55,7 +64,7 @@
 }
 html,
 body {
-  height: 100%;
+height: 100%;
 }
 body {
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
