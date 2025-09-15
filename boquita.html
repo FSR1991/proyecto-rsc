@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+  <link rel="stylesheet" href="./css/style.css" />
+  
+  <title>Boca corazón</title>
+  
+  <link rel="icon" href="./assets/img/12627970_565402680273974_842660496_n.jpg" type="image/png">
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <button class="mobile-toggle" aria-label="Abrir menú">☰</button>
+    <div class="container topbar">
+      <div class="brand" aria-label="Marca">
+        <span class="logo" href="./assets/img/13707343_922783561166860_1273763158_n.jpg" role="img" aria-hidden="true"></span>
+        <div>
+          <div style="font-size:0.9rem">Club Atletico Boca Jr.</div>
+          <div style="font-size:0.75rem;opacity:.9">Boca Corazón</div>
+        </div>
+      </div>
+
+      
+
+      
+      <nav class="main-nav" aria-label="Menú principal">
+        <ul>
+          <li><a href="#">INICIO</a></li>
+          <li><a href="#">NOTICIAS</a></li>
+          <li><a href="#">EQUIPOS</a></li>
+          <li><a href="#">LA BOMBONERA</a></li>
+          <li><a href="#">TIENDA</a></li>
+          <li><a class="cta" href="#">SOCIOS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BANNER -->
+  <section class="hero" role="banner">
+    <div class="container">
+      <h1>BOCA JR CORAZON</h1>
+      <p>Ya somos más de 160.000 los socios y socias que operamos a través de la nueva aplicación. Gestioná tu cuenta, realizá pagos y solicitá turnos. Enterate de promociones exclusivas. Reservá, confirmá o adquirí tu abono solidario..</p>
+      <!-- botones CTA -->
+      <div style="margin-top:12px;">
+        <a href="./pages/bocasocios.html" style="background:var(--gold);color:var(--navy);padding:10px 14px;border-radius:8px;font-weight:700;text-decoration:none">Ingresá a Boca Socios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTICIAS -->
+  <section class="news container" aria-labelledby="news-title">
+    <h2 id="news-title" style="margin-bottom:16px">Últimas noticias</h2>
+    <div class="news-grid">
+      <!-- Tile vacío para rellenar -->
+      <article class="tile" aria-label="Noticia 1">
+        <div class="media" aria-hidden="true"></div>
+        <div class="body">
+          <h3>Título de noticia</h3>
+          <p>Resumen corto de la noticia. Fecha · categoría</p>
+        </div>
+      </article>
+
+      <article class="tile" aria-label="Noticia 2">
+        <div class="media" aria-hidden="true"></div>
+        <div class="body">
+          <h3>Otra noticia</h3>
+          <p>Resumen corto de la noticia.</p>
+        </div>
+      </article>
+
+      <!-- cloná tiles según necesites -->
+      <article class="tile" aria-label="Noticia 3">
+        <div class="media" aria-hidden="true"></div>
+        <div class="body">
+          <h3>Título</h3>
+          <p>Resumen.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- GALERÍA / BANNER SECCIONES -->
+  <section class="gallery container" aria-labelledby="gallery-title">
+    <h2 id="gallery-title" style="margin-bottom:12px">Galería / Destacados</h2>
+    <div class="row">
+      <div class="item" aria-hidden="true"></div>
+      <div class="item" aria-hidden="true"></div>
+      <div class="item" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Contacto</h4>
+          <p class="muted">Dirección · Teléfono · Email</p>
+        </div>
+        <div>
+          <h4>Secciones</h4>
+          <p class="muted">Inicio · Noticias · Equipos · La Bombonera · Tienda</p>
+        </div>
+        <div>
+          <h4>Redes</h4>
+          <p class="muted">Enlaces a RRSS</p>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;text-align:center;font-size:0.9rem;color:rgba(255,255,255,.8)">
+        © <span id="year"></span> Club - Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Pequeño helper: año en footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle (simple)
+   
+  </script>
+
+</body>
+</html>

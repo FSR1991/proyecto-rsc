@@ -1,0 +1,91 @@
+ :root{
+      --navy: #071d49;      /* color base (azul) */
+      --gold: #ffd24d;      /* acento (amarillo/dorado) */
+      --bg: #ffffff;
+      --text: #111;
+      --muted: #666;
+      --container: 1200px;
+    }
+    * {box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--text);
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+    }
+    .container{max-width:var(--container);margin:0 auto;padding:0 16px;}
+
+    /* === Header / Navbar === */
+    header.site-header{
+      background:var(--navy);
+      color:#fff;
+      position:sticky;
+      top:0;
+      z-index:50;
+      box-shadow:0 1px 6px rgba(0,0,0,.12);
+    }
+    .topbar{display:flex;align-items:center;height:64px;}
+    .brand{
+      display:flex;align-items:center;gap:12px;font-weight:700;
+    }
+    .brand .logo{
+      width:44px;height:44px;background:#fff;border-radius:6px;display:inline-block;
+      /* reemplazá con <img> si querés */
+    }
+    nav.main-nav{margin-left:auto}
+    nav.main-nav ul{display:flex;gap:18px;align-items:center;list-style:none}
+    nav.main-nav a{color:#fff;text-decoration:none;font-weight:600;padding:8px 6px;display:inline-block}
+    nav.main-nav .cta{background:var(--gold);color:var(--navy);padding:8px 12px;border-radius:6px;font-weight:700}
+
+    /* Mobile menu (simple) */
+    .mobile-toggle{display:none;background:transparent;border:none;color:#fff;font-size:18px}
+
+    /* === Hero === */
+    .hero{
+      background: linear-gradient(180deg, rgba(7,29,73,.9) 0%, rgba(7,29,73,.75) 60%), url('placeholder-hero.jpg') center/cover no-repeat;
+      color:#fff;
+      padding:56px 0;
+      text-align:left;
+    }
+    .hero h1{font-size:2rem;letter-spacing:0.5px;margin-bottom:8px}
+    .hero p{color:rgba(255,255,255,.9);margin-bottom:14px}
+
+    /* === Noticias / Grid de tiles === */
+    .news{padding:36px 0;background:transparent}
+    .news-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:18px;
+    }
+    .tile{
+      background:#f7f7f7;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;
+      min-height:180px;
+    }
+    .tile .media{height:120px;background:#ddd}
+    .tile .body{padding:12px;flex:1}
+    .tile h3{font-size:1rem;margin-bottom:8px}
+    .tile p{font-size:0.9rem;color:var(--muted)}
+
+    /* === Galería simplificada / Slider placeholder === */
+    .gallery{padding:28px 0}
+    .gallery .row{display:flex;gap:12px;flex-wrap:wrap}
+    .gallery .item{flex:1 1 200px;height:150px;background:#eee;border-radius:8px}
+
+    /* === Footer === */
+    footer.site-footer{background:var(--navy);color:#fff;padding:28px 0;margin-top:36px}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
+    .footer h4{margin-bottom:8px}
+    .muted{color:rgba(255,255,255,.7);font-size:0.9rem}
+
+    /* === Utils / Responsive === */
+    @media (max-width:900px){
+      nav.main-nav ul{display:none}
+      .mobile-toggle{display:inline-block;margin-left:auto}
+      .brand{gap:8px}
+      .hero{padding:40px 0;text-align:center}
+      .hero h1{font-size:1.6rem}
+    }
+    document.getElementById('year').textContent = new Date( document.getElementById('year').textContent = new Date(.getFullYear);
