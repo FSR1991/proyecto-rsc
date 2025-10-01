@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+} 
+/* Variables de color gral y contenedor */
 :root {
   --navy: #071d49; /* color base (azul) */
   --gold: #ffd24d; /* color2 (amarillo/dorado) */
@@ -6,30 +12,100 @@
   --muted: #666;
   --container: 1200px;
 }
+
+/* Estilos generales */
+
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial;
+  color: var(--gold);
+  background: var(--navy);
+  /*-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;*//*esto esta en desuso*/
+  line-height: 1.4;
+}
+  
+ul{
+    list-style:none;
+}
+
 /*titulo y boton principal*/
 
-.urito{
+
+
+.navbar-conteiner{
   display: flex;
-  flex-direction: row;
-  justify-content:flex-end;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  border-radius: 5px;
+  
+  p{
+    font-weight: bold;
+  font-size: 18px;
+  margin-right: 8px; 
+  margin-left: 8px;
+  }
+
+  @media screen and (max-width: 600px) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      text-align: center;
+      font-size: x-small;
+  }
+
 }
 
-.danito{
+.logotipo{
+  display: inline-flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background-image: url("../assets/img/bocaaaaaa.png");
+  background-size: contain;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.navbar-container p {
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 8px; 
+  margin-left: 8px;
+  }
+
+  .barradelink ul {
+  list-style: none;
   display: flex;
-  align-content: center;
+  gap: 20px;
 }
 
-.barralink{
-  background:var(--navy);
-  color:#fff;
-  position:sticky;
-  top:0;
-  z-index:50;
+.barradelink a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-ul{
-  list-style:none;
+.barradelink a:hover {
+  color: #ffd24d; /* dorado */
+}
 
+.sociosx a{
+  background-color: var(--gold);
+  color: var(--text);
+  padding: 2px;
+  margin-bottom: 2%;
+  border-radius: 3px;
+}
+
+ .sociosx a:nth-child{
+  background-color: var(--text);
+color: var(--text);
 }
 
 .tituloprincipal{
@@ -40,40 +116,35 @@ ul{
   margin: 20px;
   border-radius: 10px;
   box-sizing: border-box;
-  background-color: var(--gold);
-  color: var(--muted);
+  background-color: var(--navy);
+  color: var(--gold);
   gap: 10px;
 }
 
+.hero{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow:  5px 5px 15px rgba(227, 198, 10, 0.853);
+}
 .botonsocios{
   display: grid;
   justify-items: center;
-  background-color: var(--navy);
+  background-color: var(--gold);
   width: 200px;
   padding: 10px;
   margin-top: 5px;
   box-sizing: border-box;
   border-radius: 10px;
-}
+  text-decoration: none;
 
-
-* {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-}
-html,
-body {
-height: 100%;
-}
-body {
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial;
-  color: var(--gold);
-  background: var(--navy);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.4;
+  a{
+    text-decoration: none;
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 16px;
+  } 
 }
 
 /* ESTILOS NOTICIAS */
@@ -81,7 +152,9 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 article {
@@ -107,6 +180,7 @@ article img {
   width: 100%;
   height: 230px;
   border-radius: 8px;
+  object-fit: cover;
 }
 .club {
   background: var(--navy);

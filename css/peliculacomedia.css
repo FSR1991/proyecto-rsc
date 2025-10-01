@@ -1,0 +1,115 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+
+@media screen and (max-width:630px){
+    .enlaces{
+        flex-direction: column;
+        gap: 10px;
+    }
+} 
+nav{ 
+    display: flex;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-left: 5px;
+    margin-top: 0%;
+    justify-content: space-between;
+    position: sticky;
+    
+    top: 0;
+    align-items: center;
+}
+
+.logo{
+    margin-top: 20px;
+    width:44px;
+    height:44px;
+    box-shadow: 4px 4px 6px rgb(25, 135, 84);
+    border-radius: 15px;
+    display: inline-block;
+    background-image: url(../assets/img/calavera2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#titulo-principal{
+    margin-left: 46px;
+}
+
+.enlaces{
+    
+    align-items:center;
+    padding: 20px;
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    a{color: aliceblue;
+      text-decoration: none;
+    }
+
+}
+
+a:hover{
+    color: rgb(25, 135, 84);
+    text-shadow: 3px 3px 20px rgb(252, 252, 252) ;
+}
+
+#boton{
+    background-color: rgb(25, 135, 84);
+    padding: 16px;
+    border-radius: 50px;
+    a:hover{
+        color: rgb(249, 249, 249);
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+    background-image: url(../assets/img/integrantefacu2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    } 
+
+    #tituloz{
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .integranteunico{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .integrantes{
+        text-align: center;
+
+      
+    }
+
+    h3{
+        font-weight: 400;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    h2{
+        text-shadow: 5px 5px 10px blueviolet;
+    }
